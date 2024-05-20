@@ -5,7 +5,7 @@
 
 - [Usage](#usage)
 - [Installation](#installation)
-- [Compile](#compile)
+- [Build](#build)
 - [With bonus](#with_bonus)
 
 # Usage
@@ -23,7 +23,7 @@ $ git clone https://github.com/mum26/libft.git
 $ cd libft
 ```
 
-# Compile
+# Build
 
 ```bash
 $ make
