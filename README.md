@@ -9,10 +9,10 @@
 
 # Usage
 
-"lift.a" is written when compiling "*.c".
+Add "libft.a" when compiling the "~.c" file.
 
 ```bash
-$ cc test.c libft.a
+$ cc your/file/path/~.c your/libft/path/libft.a
 ```
 
 # Installation
@@ -28,7 +28,7 @@ $ cd libft
 $ make
 ```
 
-## With_bounus
+## With_bonus
 
 ```bash
 $ make bonus
