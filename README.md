@@ -28,7 +28,7 @@ $ cd libft
 $ make
 ```
 
-## With_bonus
+### With_bonus
 
 ```bash
 $ make bonus
