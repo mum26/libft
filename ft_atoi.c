@@ -1,0 +1,58 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/03 15:53:36 by sishige           #+#    #+#             */
+/*   Updated: 2024/05/18 16:36:52 by sishige          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	ft_isspace(int c)
+{
+	if (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
+
+static int	ft_parse_sign(const char **str)
+{
+	int	sign;
+
+	sign = 1;
+	if (**str == '+' || **str == '-')
+	{
+		if (**str == '-')
+			sign = -1;
+		(*str)++;
+	}
+	return (sign);
+}
+
+int	ft_atoi(const char *str)
+{
+	int			sign;
+	long long	llnum;
+
+	while (ft_isspace(*str))
+		str++;
+	sign = ft_parse_sign(&str);
+	llnum = 0;
+	while (ft_isdigit(*str))
+	{
+		llnum = llnum * 10 + (*str - '0');
+		str++;
+		if (ft_isdigit(*str) && sign == 1 && ((LONG_MAX - (*str - '0'))
+				/ 10 < llnum || llnum * 10 >= LONG_MAX))
+			return ((int)LONG_MAX);
+		if (ft_isdigit(*str) && sign == -1 && ((LONG_MIN + (*str - '0'))
+				/ 10 > -llnum || llnum * 10 < LONG_MIN))
+			return ((int)LONG_MIN);
+	}
+	return (sign * (int)llnum);
+}
