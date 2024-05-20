@@ -60,7 +60,6 @@ else
 		OBJS = $(STD_OBJS);
 endif
 
-OBJS = $(BONUS_OBJS)
 all: $(NAME)
 
 $(NAME): $(OBJS) 
