@@ -1,3 +1,4 @@
+<div><img src="./docs/images/main.jpg" /></div>
 <div align="center">The first standard C library I created</div>
 
 ---
