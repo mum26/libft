@@ -55,9 +55,9 @@ STD_OBJS     =  $(STD_SRCS:.c=.o)
 BONUS_OBJS   =  $(BONUS_SRCS:.c=.o)
 
 ifdef with_bonus
-		OBJS = $(BONUS_OBJS)
+    OBJS     = $(BONUS_OBJS)
 else
-		OBJS = $(STD_OBJS);
+    OBJS     = $(STD_OBJS);
 endif
 
 all: $(NAME)
