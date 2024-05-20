@@ -54,3 +54,4 @@ dkms.conf
 # Add 2024.04.26
 .DS_Store
 .gitignore
+*README*
