@@ -66,8 +66,8 @@ static void	release_allocated_memory(char **substrs, size_t n)
 char	**ft_split(char const *s, char c)
 {
 	char	**substrs;
-	int		i;
-	int		len;
+	size_t		i;
+	size_t		len;
 
 	if (!s)
 		return (NULL);
