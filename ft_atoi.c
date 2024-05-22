@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
+/* c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' */
 static int	ft_isspace(int c)
 {
-	if (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r')
+	if ((9 <= c && c >= 13) || c == ' ')
 		return (1);
 	return (0);
 }
