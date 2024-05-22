@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*joined;
+	char	*join;
 	size_t	s1_len;
 	size_t	s2_size;
 
@@ -22,9 +22,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_size = ft_strlen(s2) + 1;
-	joined = (char *)ft_calloc(s1_len + s2_size, sizeof(char));
-	if (!joined)
+	join = (char *)ft_calloc(s1_len + s2_size, sizeof(char));
+	if (!join)
 		return (NULL);
-	ft_memcpy(ft_memcpy(joined, s1, s1_len) + s1_len, s2, s2_size);
-	return (joined);
+	ft_memcpy(ft_memcpy(join, s1, s1_len) + s1_len, s2, s2_size);
+	return (join);
 }
