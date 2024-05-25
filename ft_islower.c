@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 19:37:26 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:18:12 by sishige          ###   ########.fr       */
+/*   Created: 2024/05/25 19:27:15 by sishige           #+#    #+#             */
+/*   Updated: 2024/05/25 19:27:27 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_toupper(int c)
+int	ft_islower(int c)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	if ('a' <= c && c <= 'z')
+		return (1);
+	return (0);
 }

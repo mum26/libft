@@ -6,18 +6,11 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:45:34 by sishige           #+#    #+#             */
-/*   Updated: 2024/04/30 19:46:45 by sishige          ###   ########.fr       */
+/*   Updated: 2024/05/25 19:18:27 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isupper(int c)
-{
-	if ('A' <= c && c <= 'Z')
-		return (1);
-	return (0);
-}
 
 int	ft_tolower(int c)
 {

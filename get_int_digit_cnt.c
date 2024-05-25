@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   get_int_digit_cnt.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 19:37:26 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:18:12 by sishige          ###   ########.fr       */
+/*   Created: 2024/05/25 19:01:52 by sishige           #+#    #+#             */
+/*   Updated: 2024/05/25 19:01:58 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+size_t	get_int_digit_cnt(int n)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	long long	lln;
+	size_t		cnt;
+
+	if (!n)
+		return (1);
+	lln = n;
+	cnt = 0;
+	if (lln < 0)
+		lln = -lln;
+	while (0 < lln)
+	{
+		lln /= 10;
+		cnt++;
+	}
+	return (cnt);
 }

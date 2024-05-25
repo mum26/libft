@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:15:16 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/14 17:25:20 by sishige          ###   ########.fr       */
+/*   Updated: 2024/05/25 19:29:39 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ static void	release_allocated_memory(char **substrs, size_t n)
 char	**ft_split(char const *s, char c)
 {
 	char	**substrs;
-	size_t		i;
-	size_t		len;
+	size_t	i;
+	size_t	len;
 
 	if (!s)
 		return (NULL);

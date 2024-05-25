@@ -38,7 +38,11 @@ STD_SRCS    =   ft_isalpha.c \
                 ft_putchar_fd.c \
                 ft_putstr_fd.c \
                 ft_putendl_fd.c \
-                ft_putnbr_fd.c
+                ft_putnbr_fd.c \
+                ft_isupper.c \
+                ft_islower.c \
+                get_int_digit_cnt.c
+
 
 BONUS_SRCS   =  $(STD_SRCS) \
                 ft_lstnew.c \
@@ -60,6 +64,7 @@ else
        OBJS  =  $(STD_OBJS);
 endif
 
+OBJS  =  $(BONUS_OBJS)
 all: $(NAME)
 
 $(NAME): $(OBJS) 

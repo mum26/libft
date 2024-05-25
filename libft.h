@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:37:04 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/18 14:15:07 by sishige          ###   ########.fr       */
+/*   Updated: 2024/05/25 19:33:37 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -35,12 +35,15 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 /* is */
+int					ft_isupper(int c);
+int					ft_islower(int c);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 
+/* to */
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
@@ -75,6 +78,9 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *str, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/* get */
+size_t				get_int_digit_cnt(int n);
 
 /* before sorting */
 int					ft_atoi(const char *str);
