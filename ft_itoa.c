@@ -6,30 +6,11 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 19:50:06 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/20 17:59:08 by sishige          ###   ########.fr       */
+/*   Updated: 2024/05/25 19:43:42 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	get_digit_of_int(int n)
-{
-	long long	lln;
-	size_t		digit;
-
-	if (!n)
-		return (1);
-	lln = n;
-	digit = 0;
-	if (lln < 0)
-		lln = -lln;
-	while (0 < lln)
-	{
-		lln /= 10;
-		digit++;
-	}
-	return (digit);
-}
 
 char	*ft_itoa(int n)
 {
@@ -39,7 +20,7 @@ char	*ft_itoa(int n)
 
 	if (!n)
 		return (ft_strdup("0"));
-	len = get_digit_of_int(n);
+	len = ft_get_int_digit_cnt(n);
 	lln = n;
 	if (n < 0)
 	{

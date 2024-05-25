@@ -41,8 +41,7 @@ STD_SRCS    =   ft_isalpha.c \
                 ft_putnbr_fd.c \
                 ft_isupper.c \
                 ft_islower.c \
-                get_int_digit_cnt.c
-
+                ft_get_int_digit_cnt.c
 
 BONUS_SRCS   =  $(STD_SRCS) \
                 ft_lstnew.c \

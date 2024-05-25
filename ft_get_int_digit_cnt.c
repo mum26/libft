@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_int_digit_cnt.c                                :+:      :+:    :+:   */
+/*   ft_get_int_digit_cnt.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:01:52 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:01:58 by sishige          ###   ########.fr       */
+/*   Updated: 2024/05/25 19:44:44 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_int_digit_cnt(int n)
+size_t	ft_get_int_digit_cnt(int n)
 {
 	long long	lln;
 	size_t		cnt;
