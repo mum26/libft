@@ -53,7 +53,7 @@ BONUS_SRCS  = ft_lstnew.c \
               ft_lstiter.c \
               ft_lstmap.c
 
-STD_OBJS    = $(STD_SRCS:.c=.o)
+OBJS        = $(STD_SRCS:.c=.o)
 BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
 
 ifdef with_bonus
@@ -72,7 +72,7 @@ $(NAME): $(OBJS)
 
 .PHONY: clean
 clean:
-	$(RM) $(STD_OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 .PHONY: fclean
 fclean: clean
