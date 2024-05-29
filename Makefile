@@ -43,7 +43,7 @@ STD_SRCS    = ft_isalpha.c \
               ft_islower.c \
               ft_get_int_digit_cnt.c
 
-BONUS_SRCS  = t_lstnew.c \
+BONUS_SRCS  = ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
               ft_lstlast.c \
