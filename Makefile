@@ -1,10 +1,6 @@
 NAME        = libft.a
-CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -g
 AR          = ar rcs
-RM          = rm -f
-INC_DIR     = ./libft.h
-SRC_DIR     = .
 STD_SRCS    = ft_isalpha.c \
               ft_isdigit.c \
               ft_isalnum.c \
@@ -60,7 +56,7 @@ ifdef with_bonus
        OBJS += $(BONUS_OBJS)
 endif
 
-.PHONY: al
+.PHONY: all
 all: $(NAME)
 
 $(NAME): $(OBJS) 
@@ -68,7 +64,7 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 
 .c.o:
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 .PHONY: clean
 clean:
