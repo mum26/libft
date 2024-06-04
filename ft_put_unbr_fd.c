@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_uint_digit_cnt.c                            :+:      :+:    :+:   */
+/*   ft_put_unbr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 19:29:56 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/04 19:30:04 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/04 19:29:18 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/04 19:35:55 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_uint_digit_cnt(unsigned int un)
+void	ft_put_unbr_fd(unsigned int un, int fd)
 {
 	long long	lln;
-	size_t		cnt;
+	size_t		len;
+	char		str[11];
 
 	if (!un)
-		return (1);
+		return (ft_putchar_fd('0', fd));
+	len = ft_get_uint_digit_cnt(un);
 	lln = un;
-	cnt = 0;
+	str[len--] = '\0';
 	while (0 < lln)
 	{
+		str[len--] = (lln % 10) + '0';
 		lln /= 10;
-		cnt++;
 	}
-	return (cnt);
+	ft_putstr_fd(str, fd);
 }
