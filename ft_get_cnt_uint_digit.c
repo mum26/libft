@@ -14,16 +14,16 @@
 
 size_t	ft_get_cnt_uint_digit(unsigned int un)
 {
-	long long	lln;
+	//long long	lln;
 	size_t		cnt;
 
 	if (!un)
 		return (1);
-	lln = un;
+	un = un;
 	cnt = 0;
-	while (0 < lln)
+	while (0 < un)
 	{
-		lln /= 10;
+		un /= 10;
 		cnt++;
 	}
 	return (cnt);
