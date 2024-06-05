@@ -37,9 +37,12 @@ STD_SRCS    = ft_isalpha.c \
               ft_putnbr_fd.c \
               ft_isupper.c \
               ft_islower.c \
-              ft_get_int_digit_cnt.c \
-              ft_get_uint_digit_cnt.c \
-              ft_put_unbr_fd.c  
+              ft_isspace.c \
+              ft_get_cnt_int_digit.c \
+              ft_get_cnt_uint_digit.c \
+              ft_put_unbr_fd.c #\
+              ft_get_cnt_hex_digit.c \
+              ft_get_cnt_hex_digit_uint.c
 
 BONUS_SRCS  = ft_lstnew.c \
               ft_lstadd_front.c \
@@ -57,6 +60,7 @@ BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
 ifdef with_bonus
        OBJS += $(BONUS_OBJS)
 endif
+OBJS += $(BONUS_OBJS)
 
 .PHONY: all
 all: $(NAME)

@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_uint_digit_cnt.c                            :+:      :+:    :+:   */
+/*   ft_get_cnt_int_digit.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 19:29:56 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/04 19:30:04 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/05 15:04:47 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/05 15:04:50 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_uint_digit_cnt(unsigned int un)
+size_t	ft_get_cnt_int_digit(int n)
 {
 	long long	lln;
 	size_t		cnt;
 
-	if (!un)
+	if (!n)
 		return (1);
-	lln = un;
+	lln = n;
 	cnt = 0;
+	if (lln < 0)
+		lln = -lln;
 	while (0 < lln)
 	{
 		lln /= 10;

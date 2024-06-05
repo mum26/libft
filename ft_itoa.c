@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	if (!n)
 		return (ft_strdup("0"));
-	len = ft_get_int_digit_cnt(n);
+	len = ft_get_cnt_int_digit(n);
 	lln = n;
 	if (n < 0)
 	{

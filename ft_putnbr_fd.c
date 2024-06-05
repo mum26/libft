@@ -18,9 +18,11 @@ void	ft_putnbr_fd(int n, int fd)
 	size_t		len;
 	char		str[12];
 
+	if (fd < 0)
+		return ;
 	if (!n)
 		return (ft_putchar_fd('0', fd));
-	len = ft_get_int_digit_cnt(n);
+	len = ft_get_cnt_int_digit(n);
 	lln = n;
 	if (n < 0)
 	{

@@ -18,9 +18,11 @@ void	ft_put_unbr_fd(unsigned int un, int fd)
 	size_t		len;
 	char		str[11];
 
+	if (fd < 0)
+		return ;
 	if (!un)
 		return (ft_putchar_fd('0', fd));
-	len = ft_get_uint_digit_cnt(un);
+	len = ft_get_cnt_uint_digit(un);
 	lln = un;
 	str[len--] = '\0';
 	while (0 < lln)

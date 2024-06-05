@@ -35,8 +35,10 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 /* get */
-size_t				ft_get_int_digit_cnt(int n);
-size_t				ft_get_uint_digit_cnt(unsigned int un);
+size_t				ft_get_cnt_int_digit(int n);
+size_t				ft_get_cnt_uint_digit(unsigned int un);
+size_t				ft_get_cnt_hex_digit(int n);
+size_t				ft_get_cnt_hex_digit_uint(unsigned int un);
 
 /* is */
 int					ft_isupper(int c);
@@ -46,6 +48,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 
 /* to */
 int					ft_toupper(int c);

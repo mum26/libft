@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_get_cnt_uint_digit.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 19:50:56 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/13 19:51:01 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/05 15:05:00 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/05 15:05:03 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_get_cnt_uint_digit(unsigned int un)
 {
-	if (!ft_isascii(c) || fd < 0)
-		return ;
-	write(fd, &c, 1);
+	long long	lln;
+	size_t		cnt;
+
+	if (!un)
+		return (1);
+	lln = un;
+	cnt = 0;
+	while (0 < lln)
+	{
+		lln /= 10;
+		cnt++;
+	}
+	return (cnt);
 }

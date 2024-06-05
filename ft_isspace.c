@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_int_digit_cnt.c                             :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/25 19:01:52 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:44:44 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/05 15:02:54 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/05 15:03:22 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_int_digit_cnt(int n)
+int	ft_isspace(int c)
 {
-	long long	lln;
-	size_t		cnt;
-
-	if (!n)
+	if ((9 <= c && c <= 13) || c == 32)
 		return (1);
-	lln = n;
-	cnt = 0;
-	if (lln < 0)
-		lln = -lln;
-	while (0 < lln)
-	{
-		lln /= 10;
-		cnt++;
-	}
-	return (cnt);
+	return (0);
 }
