@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_cnt_int_digit.c                             :+:      :+:    :+:   */
+/*   get_number_of_digits_base.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 15:04:47 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/05 15:04:50 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/07 18:29:19 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/07 19:59:08 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_cnt_int_digit(int n)
+size_t	get_number_of_digits_base(long long lln, int base)
 {
-	long long	lln;
-	size_t		cnt;
+	size_t	digits;
 
-	if (!n)
-		return (1);
-	lln = n;
-	cnt = 0;
+	if (base != 2 && base != 10 && base != 16)
+		return (0);
 	if (lln < 0)
-		lln = -lln;
-	while (0 < lln)
 	{
-		lln /= 10;
-		cnt++;
+		if (lln == LLONG_MIN)
+			lln = -(LLONG_MIN + 1);
+		else
+			lln = -lln;
 	}
-	return (cnt);
+	digits = 1;
+	while (base <= lln)
+	{
+		digits++;
+		lln /= base;
+	}
+	return (digits);
 }

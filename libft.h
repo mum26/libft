@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:37:04 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/04 19:34:54 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/07 20:07:38 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -39,6 +39,7 @@ size_t				ft_get_cnt_int_digit(int n);
 size_t				ft_get_cnt_uint_digit(unsigned int un);
 size_t				ft_get_cnt_hex_digit(int n);
 size_t				ft_get_cnt_hex_digit_uint(unsigned int un);
+size_t				get_number_of_digits_base(long long lln, int base);
 
 /* is */
 int					ft_isupper(int c);

@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 19:29:18 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/04 19:35:55 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/07 20:17:31 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_put_unbr_fd(unsigned int un, int fd)
 		return ;
 	if (!un)
 		return (ft_putchar_fd('0', fd));
-	len = ft_get_cnt_uint_digit(un);
+	len = get_number_of_digits_base(un, 10);
 	lln = un;
 	str[len--] = '\0';
 	while (0 < lln)

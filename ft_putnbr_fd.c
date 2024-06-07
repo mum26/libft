@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 19:53:08 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:44:16 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/07 20:11:42 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	ft_putnbr_fd(int n, int fd)
 		return ;
 	if (!n)
 		return (ft_putchar_fd('0', fd));
-	len = ft_get_cnt_int_digit(n);
 	lln = n;
-	if (n < 0)
+	len = get_number_of_digits_base(lln, 10);
+	if (lln < 0)
 	{
 		lln = -lln;
 		len++;

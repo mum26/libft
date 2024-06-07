@@ -38,11 +38,7 @@ STD_SRCS    = ft_isalpha.c \
               ft_isupper.c \
               ft_islower.c \
               ft_isspace.c \
-              ft_get_cnt_int_digit.c \
-              ft_get_cnt_uint_digit.c \
-              ft_put_unbr_fd.c #\
-              ft_get_cnt_hex_digit.c \
-              ft_get_cnt_hex_digit_uint.c
+              get_number_of_digits_base.c
 
 BONUS_SRCS  = ft_lstnew.c \
               ft_lstadd_front.c \

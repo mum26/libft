@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 19:50:56 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/13 19:51:01 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/07 20:16:10 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	if (!ft_isascii(c) || fd < 0)
+	if (fd < 0)
 		return ;
 	write(fd, &c, 1);
 }

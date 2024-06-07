@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 19:50:06 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/25 19:43:42 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/07 20:09:08 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_itoa(int n)
 
 	if (!n)
 		return (ft_strdup("0"));
-	len = ft_get_cnt_int_digit(n);
 	lln = n;
-	if (n < 0)
+	len = get_number_of_digits_base(lln, 10);
+	if (lln < 0)
 	{
 		lln = -lln;
 		len++;
