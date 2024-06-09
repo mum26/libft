@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lltoa_base.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/09 15:08:47 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/09 15:09:18 by sishige          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_lltoa_base(long long lln, char *base)
@@ -6,7 +18,7 @@ char	*ft_lltoa_base(long long lln, char *base)
 	char				*str;
 	unsigned long long	ulln;
 
-	if (0 <= lln)
+	if (0 <= lln || base != DEC_DIGITS)
 	{
 		ulln = (unsigned long long)lln;
 		return (ft_ulltoa_base(ulln, base));
