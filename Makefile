@@ -38,7 +38,10 @@ STD_SRCS    = ft_isalpha.c \
               ft_isupper.c \
               ft_islower.c \
               ft_isspace.c \
-              get_number_of_digits_base.c
+              get_num_of_digit_base.c \
+              get_u_num_of_digit_base.c \
+              ft_ulltoa_base.c \
+              ft_lltoa_base.c
 
 BONUS_SRCS  = ft_lstnew.c \
               ft_lstadd_front.c \
@@ -62,11 +65,11 @@ OBJS += $(BONUS_OBJS)
 all: $(NAME)
 
 $(NAME): $(OBJS) 
-	$(AR) $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
 	ranlib $(NAME)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	@$(CC) $(CFLAGS) -c $< -o $@ 
 
 .PHONY: clean
 clean:

@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (!n)
 		return (ft_putchar_fd('0', fd));
 	lln = n;
-	len = get_number_of_digits_base(lln, 10);
+	len = get_num_of_digit_base(lln, 10);
 	if (lln < 0)
 	{
 		lln = -lln;

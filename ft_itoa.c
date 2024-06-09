@@ -21,7 +21,7 @@ char	*ft_itoa(int n)
 	if (!n)
 		return (ft_strdup("0"));
 	lln = n;
-	len = get_number_of_digits_base(lln, 10);
+	len = get_num_of_digit_base(lln, 10);
 	if (lln < 0)
 	{
 		lln = -lln;

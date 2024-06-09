@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_number_of_digits_base.c                        :+:      :+:    :+:   */
+/*   get_num_of_digit_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,18 @@
 
 #include "libft.h"
 
-size_t	get_number_of_digits_base(long long lln, int base)
+size_t	get_num_of_digit_base(long long lln, int base)
 {
-	size_t	digits;
+	unsigned long long ulln;
 
-	if (base != 2 && base != 10 && base != 16)
-		return (0);
-	if (lln < 0)
+	if (0 <= lln)
 	{
-		if (lln == LLONG_MIN)
-			lln = -(LLONG_MIN + 1);
-		else
-			lln = -lln;
+		ulln = (unsigned long long)lln;
+		return (get_u_num_of_digit_base(ulln, base));
 	}
-	digits = 1;
-	while (base <= lln)
-	{
-		digits++;
-		lln /= base;
-	}
-	return (digits);
+	if (lln == LLONG_MIN)
+		ulln = (unsigned long long)(-(lln + 1)) + 1;
+	else
+		ulln = (unsigned long long)-lln;
+	return (get_u_num_of_digit_base(ulln, base));
 }

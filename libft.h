@@ -12,9 +12,15 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <limits.h>
-# include <stdlib.h>
+# define BIN_DIGITS "01"
+# define DEC_DIGITS "0123456789"
+# define HEX_DIGITS_UP "0123456789ABCDEF"
+# define HEX_DIGITS_LOW "0123456789abcdef"
+
 # include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -35,11 +41,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 /* get */
-size_t				ft_get_cnt_int_digit(int n);
-size_t				ft_get_cnt_uint_digit(unsigned int un);
-size_t				ft_get_cnt_hex_digit(int n);
-size_t				ft_get_cnt_hex_digit_uint(unsigned int un);
-size_t				get_number_of_digits_base(long long lln, int base);
+size_t				get_num_of_digit_base(long long lln, int base);
+size_t				get_u_num_of_digit_base(unsigned long long ulln, int base);
 
 /* is */
 int					ft_isupper(int c);
@@ -69,7 +72,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_put_unbr_fd(unsigned int un, int fd);
+void				ft_put_u_nbr_fd(unsigned int un, int fd);
 
 /* str */
 size_t				ft_strlen(char const *s);
@@ -88,7 +91,9 @@ char				**ft_split(char const *str, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
-/* before sorting */
+/* ~ to ~ */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+char				*ft_ulltoa_base(unsigned long long ulln, char *base);
+char				*ft_lltoa_base(long long lln, char *base);
 #endif
