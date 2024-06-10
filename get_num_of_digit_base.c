@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:29:19 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/07 19:59:08 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/10 19:36:46 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	get_num_of_digit_base(long long lln, int base)
 {
-	unsigned long long ulln;
+	unsigned long long	ulln;
 
 	if (0 <= lln)
 	{
