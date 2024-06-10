@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:37:04 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/07 20:07:38 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/10 18:39:06 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -91,7 +91,7 @@ char				**ft_split(char const *str, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
-/* ~ to ~ */
+/* other */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_ulltoa_base(unsigned long long ulln, char *base);

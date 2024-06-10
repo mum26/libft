@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 15:08:47 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/09 15:09:18 by sishige          ###   ########.fr       */
+/*   Updated: 2024/06/10 18:25:23 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,9 @@ char	*ft_lltoa_base(long long lln, char *base)
 	char				*str;
 	unsigned long long	ulln;
 
-	if (0 <= lln || base != DEC_DIGITS)
-	{
-		ulln = (unsigned long long)lln;
-		return (ft_ulltoa_base(ulln, base));
-	}
-	if (lln == LLONG_MIN)
-		ulln = (unsigned long long)(-(lln + 1)) + 1;
-	else
-		ulln = (unsigned long long)-lln;
+	if (0 <= lln)
+		return (ft_ulltoa_base((unsigned long long)lln, base));
+	ulln = (unsigned long long)lln * -1;
 	tmp = ft_ulltoa_base(ulln, base);
 	if (!tmp)
 		return (NULL);
