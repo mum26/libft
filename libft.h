@@ -18,8 +18,9 @@
 # define HEX_DIGITS_LOW "0123456789abcdef"
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
 # include <stdbool.h>
 
 typedef struct s_list
