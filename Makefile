@@ -1,7 +1,10 @@
 NAME        = libft.a
 CFLAGS      = -Wall -Wextra -Werror -g
 AR          = ar rcs
-STD_SRCS    = ft_isalpha.c \
+SRCS        = \
+       $(addprefix $(ROOT)/, \
+              $(addprefix ft_libc/, \
+              ft_isalpha.c \
               ft_isdigit.c \
               ft_isalnum.c \
               ft_isascii.c \
@@ -41,9 +44,8 @@ STD_SRCS    = ft_isalpha.c \
               get_num_of_digit_base.c \
               get_u_num_of_digit_base.c \
               ft_ulltoa_base.c \
-              ft_lltoa_base.c
-
-BONUS_SRCS  = ft_lstnew.c \
+              ft_lltoa_base.c \
+              ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
               ft_lstlast.c \
@@ -51,15 +53,12 @@ BONUS_SRCS  = ft_lstnew.c \
               ft_lstdelone.c \
               ft_lstclear.c \
               ft_lstiter.c \
-              ft_lstmap.c
+              ft_lstmap.c \
+              ) \
+       )
 
-OBJS        = $(STD_SRCS:.c=.o)
-BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
-
-ifdef with_bonus
-       OBJS += $(BONUS_OBJS)
-endif
-OBJS += $(BONUS_OBJS)
+OBJS_DIR    = $(ROOT)/objs
+OBJS        = $(SRCS:.c=.o)
 
 .PHONY: all
 all: $(NAME)
@@ -73,7 +72,7 @@ $(NAME): $(OBJS)
 
 .PHONY: clean
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS)
 
 .PHONY: fclean
 fclean: clean
@@ -81,7 +80,3 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
-
-.PHONY: bonus
-bonus:
-	@make with_bonus=1 all

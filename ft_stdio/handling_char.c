@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   handling_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 18:37:04 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/10 18:39:06 by sishige          ###   ########.fr       */
+/*   Created: 2024/06/03 18:55:09 by sishige           #+#    #+#             */
+/*   Updated: 2024/06/09 16:48:03 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_printf.h"
 
-# include "./incs/ft_libc.h"
-# include "./incs/ft_stdio.h"
+int	print_char(int fd, int c)
+{
+	return (write(fd, &c, 1));
+}
 
-#endif
+int	print_str(int fd, char *str)
+{
+	if (!str)
+		return (write(fd, "(null)", 6));
+	return (write(fd, str, ft_strlen(str)));
+}
