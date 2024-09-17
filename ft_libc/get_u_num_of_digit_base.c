@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_libc.h"
 
 size_t	get_u_num_of_digit_base(unsigned long long ulln, int base)
 {

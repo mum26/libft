@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_stdio.h"
 
 int	convert_specifier(int fd, va_list ap, int c)
 {

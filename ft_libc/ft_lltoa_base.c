@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_libc.h"
 
 char	*ft_lltoa_base(long long lln, char *base)
 {
