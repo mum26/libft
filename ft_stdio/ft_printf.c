@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 20:09:29 by sishige           #+#    #+#             */
-/*   Updated: 2024/06/10 19:29:16 by sishige          ###   ########.fr       */
+/*   Updated: 2024/09/19 21:48:04 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ int	ft_printf(char const *fmt, ...)
 	{
 		if (*fmt++ == '%')
 		{
-			tmp = convert_specifier(STDIN_FILENO, ap, *fmt++);
+			tmp = convert_specifier(STDOUT_FILENO, ap, *fmt++);
 			if (tmp == -1)
 				return (-1);
 			len += tmp;
 		}
-		else if (write(STDIN_FILENO, fmt - 1, 1) == -1)
+		else if (write(STDOUT_FILENO, fmt - 1, 1) == -1)
 			return (-1);
 		else
 			len++;
