@@ -52,17 +52,6 @@ static size_t	get_next_substr_len(char const **str, char c)
 	return (0);
 }
 
-static void	release_allocated_memory(char **substrs, size_t n)
-{
-	while (n--)
-	{
-		free(substrs[n]);
-		substrs[n] = NULL;
-	}
-	free(substrs);
-	substrs = NULL;
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**substrs;
@@ -83,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		substrs[i] = ft_substr(s - len, 0, len);
 		if (!substrs[i++])
 		{
-			release_allocated_memory(substrs, i);
+			cleanup(substrs);
 			return (NULL);
 		}
 	}

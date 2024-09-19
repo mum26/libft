@@ -56,6 +56,7 @@ SRCS        = $(addprefix $(ROOT)/, \
                         ft_lstclear.c \
                         ft_lstiter.c \
                         ft_lstmap.c \
+                        cleanup.c \
                   ) \
                   $(addprefix ft_stdio/, \
                         ft_printf.c \

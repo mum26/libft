@@ -98,4 +98,5 @@ int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_ulltoa_base(unsigned long long ulln, char *base);
 char				*ft_lltoa_base(long long lln, char *base);
+void				cleanup(char **substrs);
 #endif
