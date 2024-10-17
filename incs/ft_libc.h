@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:37:04 by sishige           #+#    #+#             */
-/*   Updated: 2024/10/17 15:39:09 by sishige          ###   ########.fr       */
+/*   Updated: 2024/10/17 17:37:19 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 typedef struct s_list
 {
 	void			*content;
+	struct s_list	*prev;
 	struct s_list	*next;
 }					t_list;
 
