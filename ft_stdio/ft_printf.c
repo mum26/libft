@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 20:09:29 by sishige           #+#    #+#             */
-/*   Updated: 2024/09/19 21:48:04 by sishige          ###   ########.fr       */
+/*   Updated: 2024/10/17 15:40:03 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_fileno(FILE *fp)
 {
 	if (!fp)
 		return (-1);
-	return (fp->_file);
+	return (fp->_fileno);
 }
 
 int	ft_printf(char const *fmt, ...)
