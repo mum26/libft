@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 19:54:27 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/18 16:36:26 by sishige          ###   ########.fr       */
+/*   Updated: 2024/10/24 22:36:13 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,21 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
+	if (*lst && (*lst)->content == NULL)
+		*lst = (*lst)->next;
 	while (*lst)
 	{
+		if ((*lst)->content == NULL)
+		{
+			(*lst)->prev = NULL;
+			(*lst)->next = NULL;
+			free(*lst);
+			break ;
+		}
 		temp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
+		(*lst)->prev = NULL;
+		(*lst)->next = NULL;
+		ft_lstdelone(*lst, del);
 		*lst = temp;
 	}
-	*lst = NULL;
 }

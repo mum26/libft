@@ -6,7 +6,7 @@
 /*   By: sishige <sishige@student.42tokyo.j>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 20:03:41 by sishige           #+#    #+#             */
-/*   Updated: 2024/05/18 16:58:13 by sishige          ###   ########.fr       */
+/*   Updated: 2024/10/18 21:29:50 by sishige          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstnew(void *content)
 	if (!new)
 		return (NULL);
 	new->content = content;
+	new->prev = NULL;
 	new->next = NULL;
 	return (new);
 }

@@ -1,5 +1,5 @@
 NAME        = libft.a
-CFLAGS      = -Wall -Wextra -Werror -g
+CFLAGS      = -Wall -Wextra -Werror -g3
 IDFLAGS     = -I$(INCS)
 AR          = ar rcs
 ROOT        = .
