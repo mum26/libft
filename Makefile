@@ -1,10 +1,6 @@
 NAME        = libft.a
-<<<<<<< HEAD
 TEST        = libft.dylib
-CFLAGS      = -Wall -Wextra -Werror -g
-=======
 CFLAGS      = -Wall -Wextra -Werror -g3
->>>>>>> fe699203ce017a0ebf44109782953b5d406d933b
 IDFLAGS     = -I$(INCS)
 AR          = ar rcs
 ROOT        = .
