@@ -1,5 +1,10 @@
 NAME        = libft.a
+<<<<<<< HEAD
+TEST        = libft.dylib
+CFLAGS      = -Wall -Wextra -Werror -g
+=======
 CFLAGS      = -Wall -Wextra -Werror -g3
+>>>>>>> fe699203ce017a0ebf44109782953b5d406d933b
 IDFLAGS     = -I$(INCS)
 AR          = ar rcs
 ROOT        = .
@@ -86,7 +91,16 @@ clean:
 
 .PHONY: fclean
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(TEST)
+
+.PHONY: test
+test: $(TEST)
+	@echo "Running tests..."
+	python3 test_libft.py
+
+# 共有ライブラリの作成（macOSの例）
+$(TEST): $(OBJS)
+	$(CC) -shared -o $(TEST) $(OBJS)
 
 .PHONY: re
-re: fclean all
+re: fclean all test
